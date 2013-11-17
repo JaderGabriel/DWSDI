@@ -51,7 +51,7 @@ public class Login extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>ERRO NO LOGIN</title>");
-             out.println("<h1>ERRO " +busca +"</h1>");
+             out.println("<h1>ERRO :" +busca +"</h1>");
             out.println("</head>");
             out.println("<body>");
             //JOptionPane.showMessageDialog(null, "USUARIO INEXISTENTE");

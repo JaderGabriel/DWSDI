@@ -19,3 +19,4 @@ Projeto Final de DW e SDI
  no wiki.
  
  Para trabalho em equipe: http://tableless.com.br/contribuindo-em-projetos-open-source-com-o-github/#.UojM_-K3_64
+                          https://labs.moip.com.br/blog/como-contribuir-atraves-do-github/

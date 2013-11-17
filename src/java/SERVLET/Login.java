@@ -59,7 +59,6 @@ public class Login extends HttpServlet {
             //out.println("<h2>teste " + busca.getTipo()+ "</h2>");
             out.println("</body>");
             out.println("</html>");
-           
             }
             
         } finally {

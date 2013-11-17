@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"> 
         <meta charset="utf-8">
-        <title>LTP IV</title>
+        <title>WebAluno Sistema Acadêmico - Cadastrar Informações Básicas de Acadêmicos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -17,7 +22,7 @@
         </style>
         <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-
+        
     </head>
 
     <body>
@@ -30,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">Sistema Acad�mico</a>
+                    <a class="brand" href="#">Sistema Acadêmico</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li class="active"><a href="./Academico.html">Cadastrar</a></li>
@@ -45,10 +50,33 @@
 
         <div class="container">
 
-            <h3>WebAluno Sistema Acad�mico</h3>
-            <p>Trabalho desenvolvido para a disciplina de Desenvolvimento Web e Sistemas distribuidos I.<br> </p>
+            <h3>Cadastro de Alunos</h3>
 
+            <p> <fieldset>
+                <form action="ServletAlunos" >
+                    <label>Matrícula:</label>
+                    <input type="text" name="matricula" size="5" >
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
+                    <p><label>Senha:</label>
+                        <input type="password" maxlength="10" name="senha"  onclick="alert ('Limite 10 caracteres')"></p>
+                    <label>Faltas:</label>
+                    <input type="text" name="Faltas" >
+                    <label>Turma:</label>
+                    <input type="text" name="turma" >
+                    <label>Situação:</label>
+                    <input type="text" name="situação" >
+                    <label>Nota:</label>
+                    <input type="text" name="nota" >
+                    <label>E-mail:</label>
+                    <input type="text" name="e-mail" >
+                    <label>FOTO</label>
+                    <input type="file" name="arquivo" >
+                    </fieldset><br> </p>
+                    <input type="submit" value="Salvar" />
+                </form>
         </div> <!-- /container -->
 
+       
     </body>
 </html>

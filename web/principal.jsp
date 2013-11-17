@@ -28,10 +28,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    
+
+                    
                     <a class="brand" href="#">Sistema Acadêmico</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="./cadastrarAluno.jsp">Cadastrar</a></li>
+                            <li class="active"><a href="./Academico.html">Cadastrar</a></li>
                             <li><a href="./visualizarAluno.jsp">Buscar Dados</a></li>
                             <li><a href="./sobre.jsp">Sobre</a></li>
                             <li><a href="./index.jsp">Sair</a></li>

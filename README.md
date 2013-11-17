@@ -17,4 +17,5 @@ Projeto Final de DW e SDI
  
  A documentação é um trabalho constante e que se estende até a pós-codificação, podendo assim nao está totalmente atualizada 
  no wiki.
-  
+ 
+ Para trabalho em equipe: http://tableless.com.br/contribuindo-em-projetos-open-source-com-o-github/#.UojM_-K3_64

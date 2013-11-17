@@ -4,79 +4,117 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"> 
-        <meta charset="utf-8">
-        <title>WebAluno Sistema Acadêmico - Cadastrar Informações Básicas de Acadêmicos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <script language="JavaScript">
 
-        <!-- Le styles -->
-        <link href="../assets/css/bootstrap.css" rel="stylesheet">
-        <style>
-            body {
-                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            function DataHora() {
+                var data = new Date();
+                tempo.innerHTML = data;
+                setTimeout("DataHora()", 1000);
             }
-        </style>
-        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-        
-    </head>
+        </script>
 
-    <body>
+        <script language="JavaScript"  type="text/javascript">
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="#">Sistema Acadêmico</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="./Academico.html">Cadastrar</a></li>
-                            <li><a href="./visualizarAluno.jsp">Buscar Dados</a></li>
-                            <li><a href="./sobre.jsp">Sobre</a></li>
-                            <li><a href="./index.jsp">Sair</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
+            function mascaraData(campoData) {
+                var data = campoData.value;
+                if (data.length == 2) {
+                    data = data + '/';
+                    document.forms[0].data.value = data;
+                    return true;
+                }
+                if (data.length == 5) {
+                    data = data + '/';
+                    document.forms[0].data.value = data;
+                    return true;
+                }
+            }
+        </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"> 
+
+    <meta charset="utf-8">
+    <title>WebAluno Sistema Acadêmico - Cadastrar Informações Básicas de Acadêmicos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+</head>
+
+<body onLoad="DataHora()">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">Sistema Acadêmico</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="./Academico.html">Cadastrar</a></li>
+                        <li><a href="./visualizarAluno.jsp">Buscar Dados</a></li>
+                        <li><a href="./sobre.jsp">Sobre</a></li>
+                        <li><a href="./index.jsp">Sair</a></li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
             </div>
         </div>
+    </div>
 
-        <div class="container">
+    <div class="container">
 
-            <h3>Cadastro de Alunos</h3>
+        <h3>Cadastro de Alunos</h3>
+        <span id=tempo class="btn btn-large btn-primary"></span>
 
-            <p> <fieldset>
-                <form action="ServletAlunos" >
-                    <label>Matrícula:</label>
-                    <input type="text" name="matricula" size="5" >
-                    <label>Nome:</label>
-                    <input type="text" name="nome">
-                    <p><label>Senha:</label>
-                        <input type="password" maxlength="10" name="senha"  onclick="alert ('Limite 10 caracteres')"></p>
-                    <label>Faltas:</label>
-                    <input type="text" name="Faltas" >
-                    <label>Turma:</label>
-                    <input type="text" name="turma" >
-                    <label>Situação:</label>
-                    <input type="text" name="situação" >
-                    <label>Nota:</label>
-                    <input type="text" name="nota" >
-                    <label>E-mail:</label>
-                    <input type="text" name="e-mail" >
-                    <label>FOTO</label>
-                    <input type="file" name="arquivo" >
-                    </fieldset><br> </p>
-                    <input type="submit" value="Salvar" />
-                </form>
-        </div> <!-- /container -->
+        <p> <fieldset>
+            <form action="ServletAlunos" >
+                <label>Matrícula:</label>
+                <input type="text" name="matricula" size="5" >
+                <label>Nome:</label>
+                <input type="text" name="nome">
+                <!--  <p><label>Senha:</label>
+                      <input type="password" maxlength="10" name="senha"  onclick="alert ('Limite 10 caracteres')"></p>-->
 
-       
-    </body>
+                <label> Data Nascimento: </label>
+                <input type="text" name="data" OnKeyUp="mascaraData(this);" maxlength="10" / >
+                <label>Faltas:</label>
+                <input type="text" name="Faltas" >
+                <label>Turma:</label>
+                <input type="text" name="turma" >
+                <label>Situação:</label>
+                <input type="text" name="situação" >
+                <label>Nota:</label>
+                <input type="text" name="nota" >
+                <label>E-mail:</label>
+                <input type="text" name="e-mail" >
+                <label>FOTO</label>
+                <input type="file" name="arquivo" >
+                </fieldset><br> </p>
+                <input type="submit" value="Salvar" />
+            </form>
+    </div> <!-- /container -->
+
+
+
+
+</body>
 </html>
